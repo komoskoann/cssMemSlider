@@ -196,8 +196,9 @@ input {
   #radio2:checked ~ .slider-bottom .slider-controls > label:nth-child(3)::after,
   #radio3:checked ~ .slider-bottom .slider-controls > label:nth-child(4)::after,
   #radio4:checked ~ .slider-bottom .slider-controls > label:nth-child(5)::after {
-    border: 1px solid #696969;
+    border: 0.1px solid #696969;
     left: 9%;
+    top: 10%;
   }
   .slider-text > div {
     font-size: 14px;
