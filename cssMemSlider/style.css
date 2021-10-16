@@ -1,0 +1,42 @@
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  margin: auto;
+  width: 100%;
+}
+
+.slider {
+  margin: auto;
+  margin-top: 5%;
+  max-width: 1440px;
+  border: 1px solid red;
+}
+
+.slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  border: 1px solid red;
+}
+
+.slider-images {
+  max-width: 100%;
+  border: 1px solid red;
+}
+
+.slider-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+
+.slider-text {
+  border: 1px solid red;
+}
+
+.slider-controls {
+  border: 1px solid red;
+}
