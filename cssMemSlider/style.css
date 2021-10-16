@@ -22,6 +22,7 @@ main {
   max-width: 1000px;
   background-color: #778899;
   border: 1px solid #778899;
+  box-shadow: 0 0 1rem #8a8796;
 }
 
 .slider-wrapper { 
@@ -35,7 +36,6 @@ main {
   display: flex;
   align-items: center;
   width: 500%;
-  height: 600px;
   overflow: hidden;  
 }
 
@@ -57,6 +57,7 @@ main {
 .slider-text {
   display: flex;
   overflow: hidden;
+  max-width: 70%;
 }
 
 .slider-text > div {
@@ -74,46 +75,60 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 500px;
+  width: 30%;
+  position: relative;
 }
 
-.slider-controls > label {
+.slider-controls label {
   height: 50px;
   width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  /* position: relative; */
+  /* background-color: #f0b48c; */
+}
+
+.slider-controls label::after {
+  top: 14%;
+  left: 14%;
+  content: "";
+  height: 35px;
+  width: 35px;
+  display: inline-block;
   border-radius: 50%;
   cursor: pointer;
   position: relative;
   background-color: #f0e68c;
 }
 
-.slider-controls > label:hover {
+
+.slider-controls > label:hover::after {
   cursor: pointer;
   transition: 0.3s;
   background-color: #607e6d;
 }
 
-#radio0:checked ~ .slider-bottom .slider-controls > label:nth-child(1),
-#radio1:checked ~ .slider-bottom .slider-controls > label:nth-child(2),
-#radio2:checked ~ .slider-bottom .slider-controls > label:nth-child(3),
-#radio3:checked ~ .slider-bottom .slider-controls > label:nth-child(4),
-#radio4:checked ~ .slider-bottom .slider-controls > label:nth-child(5) {
+.slider-controls > label:active::after {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #bf5555;
+}
+
+#radio0:checked ~ .slider-bottom .slider-controls > label:nth-child(1)::after,
+#radio1:checked ~ .slider-bottom .slider-controls > label:nth-child(2)::after,
+#radio2:checked ~ .slider-bottom .slider-controls > label:nth-child(3)::after,
+#radio3:checked ~ .slider-bottom .slider-controls > label:nth-child(4)::after,
+#radio4:checked ~ .slider-bottom .slider-controls > label:nth-child(5)::after {
   cursor: pointer;
   background-color: white;
-  border: 5px solid #696969;
+  border: 2px solid #696969;
+  position: relative;
+  top: 10%;
+  left: 12%;
 }
 
 
-/* .slider-controls > label::after {
-  right: 20%;
-  top: 20%;
-  content: "";
-  height: 30px;
-  width: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.7);
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  position: absolute;
-} */
+
 
 input {
   display: none;
@@ -151,14 +166,15 @@ input {
 
 #radio2:checked ~ .slider-bottom .slider-text > div:nth-child(3) {
   opacity: 1;
-  margin-left: -57%;
+  margin-left: -55%;
 }
 
 #radio3:checked ~ .slider-bottom .slider-text > div:nth-child(4) {
   opacity: 1;
-  margin-left: -91%;
+  margin-left: -87%;
 }
 #radio4:checked ~ .slider-bottom .slider-text > div:nth-child(5) {
   opacity: 1;
-  margin-left: -124%;
+  margin-left: -119%;
 }
+
