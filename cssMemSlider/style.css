@@ -219,4 +219,11 @@ input {
   #radio4:checked ~ .slider-bottom .slider-text > div:nth-child(5) {
     margin-left: -162%;
   }
+
+  .slider-text > div {
+    transition: 0.2s ease-out;
+  }
+  .slider-wrapper .slider-images > img {
+    transition: 0.2s ease-out;
+  }
 }
