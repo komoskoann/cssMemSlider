@@ -1,3 +1,9 @@
+:root {
+  --size1: 1000px;
+  --size2: 300px;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -14,14 +20,14 @@ body {
 
 main {
   margin: auto;
-  width: 100%;
+  max-width: var(--size1);
 }
 
 .slider {
   margin: auto;
-  max-width: 1000px;
+  max-width: 100%;
   background-color: #778899;
-  border: 1px solid #778899;
+  border: 0.5rem solid #778899;
   box-shadow: 0 0 1rem #8a8796;
 }
 
@@ -50,7 +56,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  /* height: 50%; */
   overflow-y: hidden;
 }
 
@@ -63,7 +69,7 @@ main {
 .slider-text > div {
   display: inline;
   font-family: sans-serif;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 300;
   color: #f0e68c;
   opacity: 0;
@@ -79,8 +85,8 @@ main {
 }
 
 .slider-controls label {
-  height: 50px;
-  width: 50px;
+  height: 3.125em;
+  width: 3.125em;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -89,8 +95,8 @@ main {
   top: 14%;
   left: 14%;
   content: "";
-  height: 35px;
-  width: 35px;
+  height: 2.1875em;
+  width: 2.1875em;
   display: inline-block;
   border-radius: 50%;
   cursor: pointer;
@@ -117,7 +123,7 @@ main {
 #radio4:checked ~ .slider-bottom .slider-controls > label:nth-child(5)::after {
   cursor: pointer;
   background-color: white;
-  border: 2px solid #696969;
+  border: 0.05em solid #696969;
   position: relative;
   top: 10%;
   left: 12%;
@@ -165,13 +171,12 @@ input {
 }
 
 @media (max-width: 400px) {
-  .slider {
-    max-width: 300px;
-    max-height: 500px;
+  main {
+    max-width: var(--size2);
   }
+
   .slider-bottom {
     flex-direction: column;
-    height: 40px;
   }
   .slider-text {
     order: 2;
@@ -184,37 +189,37 @@ input {
     position: relative;
   }
   .slider-controls label {
-    height: 20px;
-    width: 20px;
+    height: 1.25em;
+    width: 1.25em;
   }
   .slider-controls label::after {
-    height: 15px;
-    width: 15px;
+    height: 0.9375em;
+    width: 0.9375em;
   }
   #radio0:checked ~ .slider-bottom .slider-controls > label:nth-child(1)::after,
   #radio1:checked ~ .slider-bottom .slider-controls > label:nth-child(2)::after,
   #radio2:checked ~ .slider-bottom .slider-controls > label:nth-child(3)::after,
   #radio3:checked ~ .slider-bottom .slider-controls > label:nth-child(4)::after,
   #radio4:checked ~ .slider-bottom .slider-controls > label:nth-child(5)::after {
-    border: 1px solid #696969;
+    border: 0.06em solid #696969;
   }
   .slider-text > div {
-    font-size: 14px;
+    font-size: 0.875em;
   }
   #radio0:checked ~ .slider-bottom .slider-text > div:nth-child(1) {
     margin-left: 1%;
   }
   #radio1:checked ~ .slider-bottom .slider-text > div:nth-child(2) {
-    margin-left: -18%;
+    margin-left: -20%;
   }
   #radio2:checked ~ .slider-bottom .slider-text > div:nth-child(3) {
-    margin-left: -75%;
+    margin-left: -78%;
   }
   #radio3:checked ~ .slider-bottom .slider-text > div:nth-child(4) {
-    margin-left: -119%;
+    margin-left: -125%;
   }
   #radio4:checked ~ .slider-bottom .slider-text > div:nth-child(5) {
-    margin-left: -162%;
+    margin-left: -170%;
   }
 
   .slider-text > div {
